@@ -1,0 +1,20 @@
+[
+    {
+        "imagen": "../assets/img/portfolio/hotel1.jpg",
+        "direccion": "Perú 255 Ciudad, Mendoza",
+        "precio": 90.000,
+        "detalles": "Habitación - 2 literas - 2 baños - 30m2"  
+    },
+    {
+        "imagen": "../assets/img/portfolio/hotel2.jpg",
+        "direccion": "Catamarca 354 Ciudad, Mendoza",
+        "precio": 85.000,
+        "detalles": "Habitación matrimonial - 1 baño - c/cochera - 30m2"
+    },
+    {
+        "imagen": "../assets/img/portfolio/hotel3.jpg",
+        "direccion": "Godoy Cruz 325 Guaymallén, Mendoza",
+        "precio": 80.000,
+        "detalles": "Monoambiente - 1 persona - 1 baño - 30m2"
+    }
+]

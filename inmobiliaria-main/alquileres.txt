@@ -1,0 +1,84 @@
+  <div class="containers">
+            <div class="card">
+              <figure> 
+                <img src="assets/img/portfolio/depto1.jpg">
+              </figure>  
+              <div class="contenido">
+                <h3>Belgrano 234 Godoy Cruz, Mendoza</h3>
+                <p>Departamento - 4 personas
+                   - 2 ambientes - 2 baños - 60m2</p>
+                    <a href="departamento.html">Leer más</a>
+              </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="card">
+              <figure> 
+                <img src="assets/img/portfolio/depto2.jpg">
+              </figure>  
+              <div class="contenido">
+                <h3>Catamarca 354 Ciudad, Mendoza</h3>
+                <p> Departamento - 2 personas - 1 baño - c/cochera - 50m2</p>
+                    <a href="departamento.html">Leer más</a>
+              </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="card">
+              <figure> 
+                <img src="assets/img/portfolio/depto3.jpg">
+              </figure>  
+              <div class="contenido">
+                <h3>Dorrego 675 Guaymallén, Mendoza</h3>
+                <p> Monoambiente - 1 persona - 1 baño - 60m2</p>
+                    <a href="departamento.html">Leer más</a>
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        document.querySelector('#boton_alqui').addEventListener('click', traerDatos);
+
+function traerDatos(){
+
+    const xhttp = new XMLHttpRequest();
+
+xhttp.open('GET', '..js/alquileres.json', true);
+
+
+xhttp.send();
+
+xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+        let datos = JSON.parse(this.responseText);
+        
+        let res = document.querySelector(".datos");
+        let res2 = document.querySelector(".items");
+        
+        for(clave in datos){
+            var arreglo = [];
+        for(item in datos[clave]){
+            arreglo.push(item);
+            res2.innerHTML += `
+            <th>${item.imagen}<th>
+            <th>${item.imagen}<th>
+            <th>${item.imagen}<th>
+            `;
+        }
+    }
+    res.innerHTML = '';
+    for(let item of datos){
+        res2.innerHTML += `
+        <td>${item.imagen}<td>
+        <td>${item.direccion}<td>
+        <td>${item.detalles}<td>
+
+        `;
+    }
+}
+}
+}
